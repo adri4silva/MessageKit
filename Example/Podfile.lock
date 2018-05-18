@@ -1,16 +1,21 @@
 PODS:
-  - MessageKit (0.13.4)
+  - MessageKit (1.0.0-beta.1)
 
 DEPENDENCIES:
-  - MessageKit (from `../`)
+  - MessageKit (from `https://github.com/adri4silva/MessageKit.git`)
 
 EXTERNAL SOURCES:
   MessageKit:
-    :path: "../"
+    :git: https://github.com/adri4silva/MessageKit.git
+
+CHECKOUT OPTIONS:
+  MessageKit:
+    :commit: 25bb955836719728c645279031a924aaa6a3b8c3
+    :git: https://github.com/adri4silva/MessageKit.git
 
 SPEC CHECKSUMS:
-  MessageKit: f51122543e9ba8b521e5eab58b0385bd7ce47a10
+  MessageKit: 6f1313d60e480e4b09641582c65f3e36825a5bf4
 
-PODFILE CHECKSUM: cecdb7bc8129cf99f66de9f68eea3256fec30c3d
+PODFILE CHECKSUM: 34b516b3ba8b8a47aa5aa399690ff49ad29cdf2d
 
 COCOAPODS: 1.5.0
