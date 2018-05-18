@@ -16,7 +16,14 @@ open class NotificationCell: UICollectionViewCell {
         return label
     }()
     
+    open func setupConstraints() {
+        self.addSubview(notificationLabel)
+        notificationLabel.centerInSuperview()
+        notificationLabel.constraint(equalTo: CGSize(width: 100, height: 50))
+    }
+    
     open func configure(with message: MessageType, at indexPath: IndexPath, and messagesCollectionView: MessagesCollectionView) {
+        self.setupConstraints()
         self.contentView.backgroundColor = UIColor.red
         self.notificationLabel.text = "Missed call from \(message.sender.displayName)"
     }
