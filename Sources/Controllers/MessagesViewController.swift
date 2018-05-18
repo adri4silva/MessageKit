@@ -73,6 +73,8 @@ UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     // MARK: - View Life Cycle
 
     open override func viewDidLoad() {
+        messagesCollectionView = MessagesCollectionView(frame: .zero, collectionViewLayout: NotificationMessagesFlowLayout())
+        messagesCollectionView.register(NotificationCell.self)
         super.viewDidLoad()
         setupDefaults()
         setupSubviews()
@@ -178,7 +180,9 @@ UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
             cell.configure(with: message, at: indexPath, and: messagesCollectionView)
             return cell
         case .custom:
-            fatalError(MessageKitError.customDataUnresolvedCell)
+            let cell = messagesCollectionView.dequeueReusableCell(NotificationCell.self, for: indexPath)
+            cell.configure(with: message, at: indexPath, and: messagesCollectionView)
+            return cell
         }
     }
 
