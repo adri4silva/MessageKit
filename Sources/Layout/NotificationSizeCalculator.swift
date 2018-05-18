@@ -10,7 +10,6 @@ import Foundation
 
 open class NotificationMessageSizeCalculator: MessageSizeCalculator {
     open override func messageContainerSize(for message: MessageType) -> CGSize {
-        let maxWidth = 100
-        return CGSize(width: maxWidth, height: 60)
+        return CGSize(width: 300, height: 22)
     }
 }
