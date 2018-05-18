@@ -18,8 +18,7 @@ open class NotificationCell: UICollectionViewCell {
     
     open func setupConstraints() {
         self.addSubview(notificationLabel)
-        notificationLabel.centerInSuperview()
-        notificationLabel.constraint(equalTo: CGSize(width: 220, height: 22))
+        notificationLabel.fillSuperview()
     }
     
     open func configure(with message: MessageType, at indexPath: IndexPath, and messagesCollectionView: MessagesCollectionView) {
