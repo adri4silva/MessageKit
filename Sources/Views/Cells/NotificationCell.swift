@@ -27,7 +27,7 @@ open class NotificationCell: UICollectionViewCell {
         switch message.kind {
         case .custom(let text):
             self.contentView.backgroundColor = UIColor.outgoingGreen
-            self.notificationLabel.text = (text as! String)
+            self.notificationLabel.attributedText = (text as! NSAttributedString)
             self.notificationLabel.textColor = .white
         default:
             break
