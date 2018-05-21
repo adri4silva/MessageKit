@@ -26,7 +26,7 @@ open class NotificationCell: UICollectionViewCell {
         self.setupConstraints()
         switch message.kind {
         case .custom(let text):
-            self.contentView.backgroundColor = UIColor.outgoingGreen
+            self.contentView.backgroundColor = UIColor(red: 0, green: 0.62, blue: 0.59, alpha: 1)
             //swiftlint:disable force_cast
             self.notificationLabel.attributedText = (text as! NSAttributedString)
             //swiftlint:enable force_cast
