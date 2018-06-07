@@ -14,6 +14,8 @@ open class NotificationCell: UICollectionViewCell {
     open var notificationLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.adjustsFontForContentSizeCategory = true
         return label
     }()
     
